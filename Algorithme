@@ -1,20 +1,15 @@
 Variable
 j, m, a, t : Entier
-
 Début
     t ← 0
-    
     Écrire("Saisir l'année : ")
     Lire a
-    
     m ← 13
     Tant que (m < 1 OU m > 12) faire
         Écrire("Saisir le mois : ")
         Lire m
     Fin tant que
-    
     j ← 32
-    
     Si (m = 2) alors
         Si ((a % 4 = 0 ET a % 100 ≠ 0) OU (a % 400 = 0)) alors
             Tant que (j > 29 OU j < 1) faire
@@ -50,7 +45,6 @@ Début
             t ← 1
         Fin si
     Fin si
-    
     Si (t = 1) alors
         j ← 1
         Si (m = 12) alors
@@ -62,6 +56,5 @@ Début
     Sinon
         j ← j + 1
     Fin si
-    
     Écrire("La prochaine date est : ", j, "/", m, "/", a)
 Fin
