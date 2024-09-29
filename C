@@ -1,20 +1,15 @@
 #include <stdio.h>
-
-int main() {
+void main() {
     int j, m, a, t;
     t = 0;
-
     printf("Saisir l'année: ");
     scanf("%d", &a);
-
     m = 13;
     while (m < 1 || m > 12) {
         printf("Saisir le mois: ");
         scanf("%d", &m);
     }
-
     j = 32;
-
     if (m == 2) {
         if ((a % 4 == 0 && a % 100 != 0) || (a % 400 == 0)) {
             while (j > 29 || j < 1) {
@@ -50,7 +45,6 @@ int main() {
             t = 1;
         }
     }
-
     if (t == 1) {
         j = 1;
         if (m == 12) {
@@ -62,8 +56,5 @@ int main() {
     } else {
         j = j + 1;
     }
-
     printf("%d/%d/%d\n", j, m, a);
-
-    return 0;
 }
