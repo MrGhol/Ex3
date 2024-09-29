@@ -2,59 +2,77 @@ Variable
 j, m, a, t : Entier
 Début
 t ← 0
-Écrire("Saisir l'année : ")
+Ecrire("Saisir l'annee : ")
 Lire (a)
 m ← 13
-Tant que (m < 1 OU m > 12) faire
+Tant que (m < 1 OU m > 12) faire {
 Ecrire("Saisir le mois : ")
 Lire (m)
+}
 Fin tant que
 j ← 32
-Si (m = 2) alors
-Si ((a % 4 = 0 ET a % 100 ≠ 0) OU (a % 400 = 0)) alors
-Tant que (j > 29 OU j < 1) faire
-Ecrire("Saisir la journée : ")
+Si (m = 2) alors {
+Si ((a % 4 = 0 ET a % 100 ≠ 0) OU (a % 400 = 0)) alors {
+Tant que (j > 29 OU j < 1) faire {
+Ecrire("Saisir la journee : ")
 Lire (j)
+}
 Fin tant que
-Si (j = 29) alors
+Si (j = 29) alors {
 t ← 1
+}
 Fin si
-Sinon
-Tant que (j > 28 OU j < 1) faire
-Ecrire("Saisir la journée : ")
+}
+Sinon {
+Tant que (j > 28 OU j < 1) faire {
+Ecrire("Saisir la journee : ")
 Lire (j)
+}
 Fin tant que
-Si (j = 28) alors
+Si (j = 28) alors {
 t ← 1
+}
 Fin si
+}
 Fin si
-Sinon Si (m = 1 OU m = 3 OU m = 5 OU m = 7 OU m = 8 OU m = 10 OU m = 12) alors
-Tant que (j > 31 OU j < 1) faire
-Ecrire("Saisir la journée : ")
+}
+Sinon Si (m = 1 OU m = 3 OU m = 5 OU m = 7 OU m = 8 OU m = 10 OU m = 12) alors {
+Tant que (j > 31 OU j < 1) faire {
+Ecrire("Saisir la journee : ")
 Lire (j)
+}
 Fin tant que
-Si (j = 31) alors
+Si (j = 31) alors {
 t ← 1
+}
 Fin si
-Sinon
-Tant que (j > 30 OU j < 1) faire
-Ecrire("Saisir la journée : ")
+}
+Sinon {
+Tant que (j > 30 OU j < 1) faire {
+Ecrire("Saisir la journee : ")
 Lire (j)
+}
 Fin tant que
-Si (j = 30) alor
+Si (j = 30) alor {
 t ← 1
+}
 Fin si
+}
 Fin si
-Si (t = 1) alors
+Si (t = 1) alors {
 j ← 1
-Si (m = 12) alors
+Si (m = 12) alors {
 m ← 1
 a ← a + 1
-Sinon
+}
+Sinon {
 m ← m + 1
+}
 Fin si
-Sinon
+}
+Sinon {
 j ← j + 1
+}
 Fin si
 Ecrire("La prochaine date est : ", j, "/", m, "/", a)
 Fin
