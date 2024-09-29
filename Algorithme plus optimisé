@@ -1,0 +1,46 @@
+Variable
+j, m, a, t : Entier
+jours_max : Entier
+Début
+t ← 0
+Ecrire("Saisir l'annee : ")
+Lire(a)
+Répéter {
+Ecrire("Saisir le mois : ")
+Lire(m)
+}
+Jusqu'à (m >= 1 ET m <= 12)
+Si (m = 2) alors {
+Si ((a % 4 = 0 ET a % 100 ≠ 0) OU (a % 400 = 0)) alors
+jours_max ← 29
+Sinon
+jours_max ← 28
+Fin si
+}
+Sinon Si (m = 1 OU m = 3 OU m = 5 OU m = 7 OU m = 8 OU m = 10 OU m = 12) alors
+jours_max ← 31
+Sinon
+jours_max ← 30
+Fin si
+Répéter {
+Ecrire("Saisir la journee : ")
+Lire(j)
+}
+Jusqu'à (j >= 1 ET j <= jours_max)
+Si (j = jours_max) alors {
+j ← 1
+Si (m = 12) alors {
+m ← 1
+a ← a + 1
+}
+Sinon {
+m ← m + 1
+}
+Fin si
+}
+Sinon {
+j ← j + 1
+}
+Fin si
+Ecrire("La prochaine date est : ", j, "/", m, "/", a)
+Fin
