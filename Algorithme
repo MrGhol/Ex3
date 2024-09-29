@@ -1,15 +1,15 @@
 Variable
-j, m, a, t : Entiers
+j, m, a, t : Entier
 
 Début
     t ← 0
     
-    Écrire "Saisir l'année : "
+    Écrire("Saisir l'année : ")
     Lire a
     
     m ← 13
     Tant que (m < 1 OU m > 12) faire
-        Écrire "Saisir le mois : "
+        Écrire("Saisir le mois : ")
         Lire m
     Fin tant que
     
@@ -18,7 +18,7 @@ Début
     Si (m = 2) alors
         Si ((a % 4 = 0 ET a % 100 ≠ 0) OU (a % 400 = 0)) alors
             Tant que (j > 29 OU j < 1) faire
-                Écrire "Saisir la journée : "
+                Écrire("Saisir la journée : ")
                 Lire j
             Fin tant que
             Si (j = 29) alors
@@ -26,7 +26,7 @@ Début
             Fin si
         Sinon
             Tant que (j > 28 OU j < 1) faire
-                Écrire "Saisir la journée : "
+                Écrire("Saisir la journée : ")
                 Lire j
             Fin tant que
             Si (j = 28) alors
@@ -35,7 +35,7 @@ Début
         Fin si
     Sinon Si (m = 1 OU m = 3 OU m = 5 OU m = 7 OU m = 8 OU m = 10 OU m = 12) alors
         Tant que (j > 31 OU j < 1) faire
-            Écrire "Saisir la journée : "
+            Écrire("Saisir la journée : ")
             Lire j
         Fin tant que
         Si (j = 31) alors
@@ -43,7 +43,7 @@ Début
         Fin si
     Sinon
         Tant que (j > 30 OU j < 1) faire
-            Écrire "Saisir la journée : "
+            Écrire("Saisir la journée : ")
             Lire j
         Fin tant que
         Si (j = 30) alors
@@ -63,5 +63,5 @@ Début
         j ← j + 1
     Fin si
     
-    Écrire "La prochaine date est : ", j, "/", m, "/", a
+    Écrire("La prochaine date est : ", j, "/", m, "/", a)
 Fin
