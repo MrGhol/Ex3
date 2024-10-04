@@ -12,7 +12,7 @@ Lire (m)
 Fin tant que
 j ← 32
 Si (m = 2) alors {
-Si ((a % 4 = 0 ET a % 100 ≠ 0) OU (a % 400 = 0)) alors {
+Si ((a mod 4 = 0 ET a mod 100 ≠ 0) OU (a mod 400 = 0)) alors {
 Tant que (j > 29 OU j < 1) faire {
 Ecrire("Saisir la journee : ")
 Lire (j)
