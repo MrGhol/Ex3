@@ -1,65 +1,33 @@
 Variable
 j, m, a, t : Entier
+jours_max : Entier
 Début
 t ← 0
 Ecrire("Saisir l'annee : ")
-Lire (a)
-m ← 13
-Tant que (m < 1 OU m > 12) faire {
+Lire(a)
+Répéter {
 Ecrire("Saisir le mois : ")
-Lire (m)
+Lire(m)
 }
-Fin tant que
-j ← 32
+Jusqu'à (m >= 1 ET m <= 12)
 Si (m = 2) alors {
-Si ((a mod 4 = 0 ET a mod 100 ≠ 0) OU (a mod 400 = 0)) alors {
-Tant que (j > 29 OU j < 1) faire {
+Si ((a mod 4 = 0 ET a mod 100 ≠ 0) OU (a mod 400 = 0)) alors
+jours_max ← 29
+Sinon
+jours_max ← 28
+Fin si
+}
+Sinon Si (m = 1 OU m = 3 OU m = 5 OU m = 7 OU m = 8 OU m = 10 OU m = 12) alors
+jours_max ← 31
+Sinon
+jours_max ← 30
+Fin si
+Répéter {
 Ecrire("Saisir la journee : ")
-Lire (j)
+Lire(j)
 }
-Fin tant que
-Si (j = 29) alors {
-t ← 1
-}
-Fin si
-}
-Sinon {
-Tant que (j > 28 OU j < 1) faire {
-Ecrire("Saisir la journee : ")
-Lire (j)
-}
-Fin tant que
-Si (j = 28) alors {
-t ← 1
-}
-Fin si
-}
-Fin si
-}
-Sinon Si (m = 1 OU m = 3 OU m = 5 OU m = 7 OU m = 8 OU m = 10 OU m = 12) alors {
-Tant que (j > 31 OU j < 1) faire {
-Ecrire("Saisir la journee : ")
-Lire (j)
-}
-Fin tant que
-Si (j = 31) alors {
-t ← 1
-}
-Fin si
-}
-Sinon {
-Tant que (j > 30 OU j < 1) faire {
-Ecrire("Saisir la journee : ")
-Lire (j)
-}
-Fin tant que
-Si (j = 30) alor {
-t ← 1
-}
-Fin si
-}
-Fin si
-Si (t = 1) alors {
+Jusqu'à (j >= 1 ET j <= jours_max)
+Si (j = jours_max) alors {
 j ← 1
 Si (m = 12) alors {
 m ← 1
