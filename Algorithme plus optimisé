@@ -76,3 +76,4 @@ j ← j + 1
 Fin si
 Ecrire("La prochaine date est : ", j, "/", m, "/", a)
 Fin
+idée de debut
